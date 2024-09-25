@@ -1,5 +1,5 @@
 import connectMongo from '../../../lib/mongodb';
-import Todo from '../models/Todo';
+import Todo from '../../../models/Todo';
 
 // POST Method Handler
 async function POST(req, res) {

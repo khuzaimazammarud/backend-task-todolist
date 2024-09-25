@@ -1,5 +1,5 @@
 import connectMongo from "../../../lib/mongodb";
-import Todo from "../models/Todo";
+import Todo from "../../../models/Todo";
 
 export default async function handler(req, res) {
   const { method } = req;

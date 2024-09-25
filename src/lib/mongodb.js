@@ -1,8 +1,7 @@
 // lib/mongodb.js
 import mongoose from 'mongoose';
 
-const MONGO_URI = "mongodb+srv://muscle:muscle123@cluster0.juxhtqs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";  // Your MongoDB URI here
-
+const MONGO_URI = process.env.MONGO_URI;;
 if (!MONGO_URI) {
   throw new Error(
     'Please define the MONGO_URI environment variable inside .env.local'
@@ -22,7 +21,6 @@ async function connectMongo() {
   }
 
   if (!cached.promise) {
-    console.log("Creating new MongoDB connection...");
     cached.promise = mongoose.connect(MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
