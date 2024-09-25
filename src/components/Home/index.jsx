@@ -1,4 +1,10 @@
+import TodoList from "../TodoList";
+
 function HomeComponent() {
-  return <p>this is home component</p>;
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <TodoList />
+    </div>
+  );
 }
 export default HomeComponent;
